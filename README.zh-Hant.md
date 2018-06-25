@@ -10,7 +10,7 @@ Pcap_DNSProxy, a local DNS server based on WinPcap and LibPcap
 **說明文檔參見專案 [Documents 資料夾](https://github.com/chengr28/Pcap_DNSProxy/tree/master/Documents) 的內容**
 
 ### Summary
-Pcap_DNSProxy 是一個基於 WinPcap/LibPcap 用於過濾 DNS 投毒污染的工具，提供便捷和強大的包含正則運算式的修改 Hosts 的方法，以及對 DNSCurve/DNSCrypt 協定、並行和 TCP 協定請求的支援。 多伺服器並行請求功能，更可提高在惡劣網路環境下網域名稱解析的可靠性：
+Pcap_DNSProxy 是一個基於 WinPcap/LibPcap 用於過濾 DNS 投毒污染的工具，提供便捷和強大的包含正則運算式的修改 Hosts 的方法，以及對 DNSCurve/DNSCrypt 協定、並行和 TCP 協定請求的支援。多伺服器並行請求功能，更可提高在惡劣網路環境下網域名稱解析的可靠性：
 * IPv4/IPv6 協定雙棧支援，並可自訂多埠多位址監聽和遠端請求協定
 * 伺服器模式為其它設備提供解析服務，可限制請求範圍
 * 支援對 CNAME 記錄和解析結果進行 Hosts 並同時支援 Local Hosts 境內 DNS 伺服器解析，可提高對境內網域名稱解析速度和伺服器存取速度
@@ -28,7 +28,6 @@ Pcap_DNSProxy 是一個基於 WinPcap/LibPcap 用於過濾 DNS 投毒污染的�
   * 支援 [編譯所需依賴包](https://github.com/chengr28/Pcap_DNSProxy/tree/master/Documents) 的 Linux 發行版本
 * macOS
   * **支援 64 位 Mac OS X 10.8(Mountain Lion) 以及更新的 macOS 版本**
-  * 可通過 Homebrew 安裝正式版本
 * OpenWrt/LEDE
   * **參見 [openwrt-Pcap_DNSProxy 專案](https://github.com/wongsyrone/openwrt-Pcap_DNSProxy)**
 * 本工具**抓包模組**所支援的網路類型

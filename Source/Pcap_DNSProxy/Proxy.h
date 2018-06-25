@@ -20,7 +20,7 @@
 #ifndef PCAP_DNSPROXY_PROXY_H
 #define PCAP_DNSPROXY_PROXY_H
 
-#include "Base.h"
+#include "Include.h"
 
 //Global variables
 extern CONFIGURATION_TABLE Parameter;
@@ -80,6 +80,8 @@ bool HTTP_CONNECT_Handshake(
 	std::vector<SOCKET_DATA> &SocketDataList, 
 	std::vector<SOCKET_SELECTING_SERIAL_DATA> &SocketSelectingDataList, 
 	std::vector<ssize_t> &ErrorCodeList, 
+	const uint16_t QueryType, 
+	const SOCKET_DATA &LocalSocketData, 
 	void *TLS_Context);
 bool HTTP_CONNECT_Exchange(
 	std::vector<SOCKET_DATA> &SocketDataList, 

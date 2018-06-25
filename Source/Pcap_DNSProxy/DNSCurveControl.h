@@ -20,7 +20,7 @@
 #ifndef PCAP_DNSPROXY_DNSCURVE_H
 #define PCAP_DNSPROXY_DNSCURVE_H
 
-#include "Base.h"
+#include "Include.h"
 
 #if defined(ENABLE_LIBSODIUM)
 //Global variables
@@ -28,8 +28,8 @@ extern CONFIGURATION_TABLE Parameter;
 extern GLOBAL_STATUS GlobalRunningStatus;
 extern ALTERNATE_SWAP_TABLE AlternateSwapList;
 extern DNSCURVE_CONFIGURATION_TABLE DNSCurveParameter;
-extern std::deque<SOCKET_MARKING_DATA> SocketMarkingList;
-extern std::mutex SocketMarkingLock;
+extern std::deque<SOCKET_REGISTER_DATA> SocketRegisterList;
+extern std::mutex SocketRegisterLock;
 
 //Functions
 size_t DNSCurvePaddingData(
@@ -37,9 +37,10 @@ size_t DNSCurvePaddingData(
 	uint8_t * const Buffer, 
 	const size_t Length, 
 	const size_t BufferSize);
-bool DNSCurveSelectTargetSocket(
+uint16_t DNSCurveSelectTargetSocket(
 	const uint16_t Protocol, 
-	bool &IsIPv6, 
+	const uint16_t QueryType, 
+	const SOCKET_DATA &LocalSocketData, 
 	bool ** const IsAlternate);
 #endif
 #endif
