@@ -48,7 +48,7 @@ fi
 if (echo "$*" | grep -iq -e "--enable-static"); then
 	CMakeShell="${CMakeShell}-DSTATIC_LIB=ON "
 fi
-CMakeShell="${CMakeShell}../Pcap_DNSProxy"
+CMakeShell="${CMakeShell} -std=c++11 ../Pcap_DNSProxy"
 ${CMakeShell}
 make -j${ThreadNum}
 cd ..
