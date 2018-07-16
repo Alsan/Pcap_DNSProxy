@@ -74,9 +74,8 @@ add_executable(Pcap_DNSProxy ${MAIN_SRC_FILES})
 ## See https://developers.redhat.com/blog/2018/03/21/compiler-and-linker-flags-gcc.
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
-IF(APPLE)
-	add_definitions(-std=c++14)
-ENDIF(APPLE)
+add_definitions(-std=c++14)
+
 IF(NOT PLATFORM_OPENWRT)
 	IF(CMAKE_VERSION VERSION_LESS "3.9")
 		add_definitions(-flto)
